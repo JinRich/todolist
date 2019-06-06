@@ -1,0 +1,134 @@
+@import "base.css";
+body{
+    background: #8e9397;
+    font-family: Microsoft JhengHei;
+}
+.main{
+    width: 300px;
+    background: white;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    box-shadow: #4e4f4e 0 7px 15px ;
+}
+ul.tab{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px darkgrey solid;
+}
+ul.tab > li{
+    width: 100px;
+    height: 100%;
+    font-size: 25px;
+    line-height: 60px;
+    text-align: center;
+    color: #62676b;
+    z-index: 1;
+    cursor: pointer;
+}
+ul.tab > li.hot{
+    color: white;
+    transition: all .7s;
+}
+ul.tab > .backImg{
+    background: #8e9397;
+    border-radius: 4px;
+    box-shadow:  #96999b 0 6px 12px ;
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+}
+li.hot:nth-child(1)~.backImg{
+    transform: translate(0,0);
+}
+li.hot:nth-child(2)~.backImg{
+    transform: translate(100%,0);
+}
+li.hot:nth-child(3)~.backImg{
+    transform: translate(200%,0);
+}
+.box{
+    padding: 10px 20px 10px;
+}
+ul.content{
+    /*padding:25px 25px 10px;*/
+}
+ul.content > li{
+    padding: 10px 12px;
+    color: white;
+    margin-bottom: 20px;
+    background:#96999b;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 8px 0px #383838;
+    overflow: hidden;
+    line-height: 1;
+}
+ul.content > li>input{
+    float: left;
+}
+ul.content > li>p{
+     float: left;
+    cursor: default;
+    max-width: 145px;
+    overflow: hidden;
+ }
+ul.content > li>time{
+    float: right;
+    font-size: 10px;
+    display: block;
+    height: 100%;
+    line-height: 16px;
+    cursor: default;
+}
+ul.content > li>span{
+    float: right;
+    font-size: 10px;
+    color: white;
+    height: 14px;
+    width: 14px;
+    line-height: 14px;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 5px;
+    background: black;
+    cursor: pointer;
+    margin-top: 1px;
+}
+.add > .lContent{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 25px;
+}
+.add input{
+    margin-left: 10px;
+    width: 150px;
+    height: 22px;
+    border-radius: 10px;
+    border: 1px gainsboro solid;
+    float: left;
+    padding: 0 15px;
+    outline: none;
+}
+::-webkit-input-placeholder{
+    margin-left: 15px;
+    color: #a9a9a9;
+}
+.add .submit{
+    float: right;
+    margin-right: 10px;
+    height: 24px;
+    width: 42px;
+    color: white;
+    background: #8e9397;
+    border-radius: 5px;
+    box-shadow: #96999b 0 4px 9px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
