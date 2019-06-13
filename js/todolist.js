@@ -8,12 +8,16 @@ window.onload=function () {
         {id:4,lContent:'吃中午饭',lTime:'2019/6/4',status:true},
         {id:5,lContent:'吃晚饭',lTime:'2019/6/11',status:true}
     ];
+    let str = localStorage.getItem('list');
+    if (!str){
+        localStorage.setItem('list' , JSON.stringify(list));
+    }
+    list = JSON.parse(str);
     console.log(list);
     let type='all';
     ////////////////////渲染函数/////////////////
     function render(arr){
         let html="";
-
         arr.forEach(function (ele) {
             if (ele.status){
                 html+=`
@@ -35,6 +39,7 @@ window.onload=function () {
             }
         });
         content.innerHTML=html;
+        localStorage.setItem('list' , JSON.stringify(list));
     }
     render(list);
     content.onclick=function(e){
